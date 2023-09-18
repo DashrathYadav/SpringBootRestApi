@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.mongoDBRestApi.entities.Courses;
+import com.example.mongoDBRestApi.model.Courses;
 
 @Service
 public class CourseServiceImpl implements CourseService {

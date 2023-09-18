@@ -2,7 +2,7 @@ package com.example.mongoDBRestApi.Services;
 
 import java.util.List;
 
-import com.example.mongoDBRestApi.entities.Courses;
+import com.example.mongoDBRestApi.model.Courses;
 
 public interface CourseService {
 

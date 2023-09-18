@@ -1,4 +1,4 @@
-package com.example.mongoDBRestApi.entities;
+package com.example.mongoDBRestApi.model;
 
 public class Courses {
 	
