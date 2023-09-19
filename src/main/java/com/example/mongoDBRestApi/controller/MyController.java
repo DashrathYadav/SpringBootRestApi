@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ public class MyController {
 	private ServerRepository serverRepo;
 
 	// fetch single server by id
+	@CrossOrigin(origins="http://localhost:5173")
 	@GetMapping("/Servers/{serverId}")
 	public  ResponseEntity<?> getServers(@PathVariable String serverId)
 	{
@@ -52,6 +54,7 @@ public class MyController {
 	
 	
 	// fetch servers by server name
+	@CrossOrigin(origins="http://localhost:5173")
 	@GetMapping("/Servers/name/{serverName}")
 	public  ResponseEntity<?> getServersByName(@PathVariable String serverName)
 	{
@@ -76,6 +79,7 @@ public class MyController {
 	
 	
 	// fetch all server 
+	@CrossOrigin(origins="http://localhost:5173")
 	@GetMapping("/Servers")
 	public  ResponseEntity<?> getServers()
 	{
@@ -98,6 +102,7 @@ public class MyController {
 	
 	
 	//  add single server 
+	@CrossOrigin(origins="http://localhost:5173")
 	@PostMapping("/Servers")
 	public ResponseEntity<?>addServer(@RequestBody Servers server)
 	{	System.out.println("server post hit");
@@ -115,6 +120,7 @@ public class MyController {
 	
 	
 //	update server with given id
+	@CrossOrigin(origins="http://localhost:5173")
 	@PutMapping("/Servers/{serverId}")
 	public ResponseEntity<?> updateServer(@PathVariable String serverId,@RequestBody Servers newServer)
 	{
@@ -128,9 +134,9 @@ public class MyController {
 			{
 				Servers serverToSave = server.get();
 				
-				serverToSave.framework= newServer.framework !=null ? newServer.framework : serverToSave.framework;
-				serverToSave.language= newServer.language !=null ? newServer.language : serverToSave.language;
-				serverToSave.name= newServer.name !=null ? newServer.name : serverToSave.name;
+				serverToSave.framework= newServer.framework !=null  ? newServer.framework != "" ? newServer.framework: serverToSave.framework : serverToSave.framework;
+				serverToSave.language= newServer.language !=null ? newServer.language != "" ? newServer.language: serverToSave.language : serverToSave.language;
+				serverToSave.name= newServer.name !=null ? newServer.name != "" ? newServer.name: serverToSave.name : serverToSave.name;
 				
 				serverRepo.save(serverToSave);
 				
@@ -147,6 +153,7 @@ public class MyController {
 	}
 	
 // Delete server of given id
+	@CrossOrigin(origins="http://localhost:5173")
 	@DeleteMapping("/Servers/{serverId}")
 	public ResponseEntity<?> deleteServer(@PathVariable String serverId)
 	{
