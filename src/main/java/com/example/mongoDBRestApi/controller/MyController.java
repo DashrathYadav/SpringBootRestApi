@@ -32,7 +32,7 @@ public class MyController {
 	
 	@GetMapping("/")
 	public String homePage() {
-		return "Hello Cloud";
+		return "Hello Azure Cloud";
 	}
 
 	// fetch single server by id
