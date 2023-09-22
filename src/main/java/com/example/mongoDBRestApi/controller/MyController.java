@@ -29,6 +29,11 @@ public class MyController {
 	
 	@Autowired
 	private ServerRepository serverRepo;
+	
+	@GetMapping("/")
+	public String homePage() {
+		return "Hello Cloud";
+	}
 
 	// fetch single server by id
 	@CrossOrigin(origins="http://localhost:5173")
