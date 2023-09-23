@@ -14,7 +14,7 @@ public class MongoDbRestApiApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
-		logger.info("Hello Dashrath it is main class")
+		logger.info("Hello Dashrath it is main class");
 		SpringApplication.run(MongoDbRestApiApplication.class, args);
 	}
 
