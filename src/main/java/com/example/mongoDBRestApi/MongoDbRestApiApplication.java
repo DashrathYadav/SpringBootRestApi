@@ -23,6 +23,7 @@ public class MongoDbRestApiApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		logger.info("Its my second logger dashrath");
 		
+		
 	}
 
 }
