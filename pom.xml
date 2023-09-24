@@ -15,7 +15,6 @@
 	<name>mongoDBRestApi</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		 <tomcat.version>9.0.80</tomcat.version>
 		<java.version>20</java.version>
 	</properties>
 	<dependencies>

@@ -5,12 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+//Main Application Class.
 @SpringBootApplication
 public class MongoDbRestApiApplication implements CommandLineRunner {
 	
+	// for printing output on console while bulding to check intended application is co
 	public static final Logger logger =LoggerFactory.getLogger(MongoDbRestApiApplication.class);
 	
 

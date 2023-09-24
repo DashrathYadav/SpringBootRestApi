@@ -1,5 +1,6 @@
 package com.example.mongoDBRestApi.model;
 
+
 public class Courses {
 	
 	private long id;

@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+
+// Schema  of server Object.
 @Setter
 @Getter
 @AllArgsConstructor
@@ -14,19 +16,11 @@ import lombok.Setter;
 public class Servers {
 
 	@Id
-	public String id;
-	public String name;
-	public String language;
-	public String framework;
+	public String id;			// Server Id
+	public String name;			// Server Name
+	public String language;		// Server in which Language
+	public String framework;	// Server based on which frame work
 
 	
 	
 }
-
-
-//{
-//“name”: ”my centos”,
-//“id”: “123”,
-//“language”:”java”,
-//“framework”:”django”
-//}
