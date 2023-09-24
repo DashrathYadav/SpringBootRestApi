@@ -18,8 +18,7 @@ COPY src/ src/
 # Build the application
 RUN mvn clean package
 
-# Copy the JAR file from the target directory to the container
-COPY target/*.jar app.jar
+
 
 # Define the entry point for the container
 ENTRYPOINT ["java", "-jar", "app.jar"]
