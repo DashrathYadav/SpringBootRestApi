@@ -44,7 +44,7 @@ public class MyController {
 	}
 
 	// fetch single server by id
-	@CrossOrigin(origins="http://localhost:5173")		// handling cors policy for frontend
+	@CrossOrigin(origins="https://server-management.netlify.app/")		// handling cors policy for frontend
 	@GetMapping("/Servers/{serverId}")
 	public  ResponseEntity<?> getServers(@PathVariable String serverId)
 	{
@@ -69,7 +69,7 @@ public class MyController {
 	
 	// fetch servers by server name.
 	//returning Response of List of servers 
-	@CrossOrigin(origins="http://localhost:5173")
+	@CrossOrigin(origins="https://server-management.netlify.app/")
 	@GetMapping("/Servers/name/{serverName}")
 	public  ResponseEntity<?> getServersByName(@PathVariable String serverName)
 	{
@@ -96,7 +96,7 @@ public class MyController {
 	
 	// fetch all server from mongoDB.
 	// returns the Response of list of all servers.
-	@CrossOrigin(origins="http://localhost:5173")
+	@CrossOrigin(origins="https://server-management.netlify.app/")
 	@GetMapping("/Servers")
 	public  ResponseEntity<?> getServers()
 	{
@@ -120,7 +120,7 @@ public class MyController {
 	
 	//  add single server to the mongodb
 	// takes server obj as input(request body)
-	@CrossOrigin(origins="http://localhost:5173")
+	@CrossOrigin(origins="https://server-management.netlify.app/")
 	@PostMapping("/Servers")
 	public ResponseEntity<?>addServer(@RequestBody Servers server)
 	{	System.out.println("server post hit");
@@ -138,7 +138,7 @@ public class MyController {
 	
 //	update server with given id
 //  takes server id &  obj as input(request body)
-	@CrossOrigin(origins="http://localhost:5173")
+	@CrossOrigin(origins="https://server-management.netlify.app/")
 	@PutMapping("/Servers/{serverId}")
 	public ResponseEntity<?> updateServer(@PathVariable String serverId,@RequestBody Servers newServer)
 	{
@@ -174,7 +174,7 @@ public class MyController {
 	
 	// Delete server of given id
 	// returns status of Deletion success or failed
-	@CrossOrigin(origins="http://localhost:5173")
+	@CrossOrigin(origins="https://server-management.netlify.app/")
 	@DeleteMapping("/Servers/{serverId}")
 	public ResponseEntity<?> deleteServer(@PathVariable String serverId)
 	{
